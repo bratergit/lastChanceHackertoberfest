@@ -19,8 +19,8 @@ This project is a real-time stock market dashboard built using Dash, Plotly, and
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/bratergit/lastChanceHackertoberfest.git
+    cd lastChanceHackertoberfest/stocks/Real-Time_Stock_Dashboard
     ```
 
 2. Install the required packages:
