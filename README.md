@@ -55,7 +55,7 @@ README.md
 1. Fork this repository.
 2. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/Last-Chance-Hacktoberfest-2024.git
+   git clone https://github.com/bratergit/lastChanceHackertoberfest.git
 
 3. Choose a task from the issues section or create your own.
 4. Create a branch with the name of your task:
@@ -89,7 +89,6 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 Don’t miss your last chance to participate in Hacktoberfest 2024! Let’s learn, contribute, and have fun together. If you need any help, feel free to open an issue.
 
 👻 Happy Hacking! 💻🎃
-
 
 
 
