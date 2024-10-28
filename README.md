@@ -9,7 +9,6 @@ Hacktoberfest is a celebration of open source during the month of October. We ai
 - **Contribute to ongoing projects**
 - **Learn valuable skills** such as data visualization, automation, and data manipulation
 - **Receive feedback** to improve your coding skills
-- **Earn special swag** by completing your 4 valid PRs (pull requests)!
 
 ## 🗂 Repository Structure
 
