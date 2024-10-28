@@ -19,6 +19,10 @@ This subdirectory contains the file `analiseAtivo.py`, which is the main script 
 
 The `macd` subdirectory includes files related to the implementation of the MACD technical analysis strategy. This method is widely used by traders to detect changes in the strength, direction, momentum, and duration of a market trend.
 
+### `stock_price_predictor/`
+
+A stock price prediction model that predicts future stock prices using machine learning techniques.
+
 ### `.gitignore`
 
 This file ensures that unnecessary files, such as cache, logs, or dependency directories, are not included in the Git version control.
