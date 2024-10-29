@@ -3,7 +3,7 @@ name: Run Automated Tests
 on:
   pull_request:
     branches:
-      - main  # Change to your main branch name if different
+      - main  # Adjust if your main branch is named differently
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'  # Adjust to your project's Python version
+        python-version: '3.8'  # Change to your version
 
     - name: Install dependencies
       run: |
@@ -25,6 +25,6 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest  # or 'python -m unittest discover' for unittest
+        pytest stocks/ graphs/ analytics/  # Adjust based on your directory structure
       env:
         CI: true  # Set this environment variable to ensure the tests run in CI mode
