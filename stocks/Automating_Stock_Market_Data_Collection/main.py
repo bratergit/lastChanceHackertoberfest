@@ -1,5 +1,6 @@
 import yfinance as yf
 import logging
+import os
 from datetime import datetime
 
 # Configure logging
@@ -28,13 +29,35 @@ def fetch_stock_data(ticker, start_date, end_date):
     except Exception as e:
         logging.error(f"An error occurred: {e}")
 
+def save_to_csv(data, ticker, start_date, end_date, directory):
+    try:
+        # Ensure directory exists
+        os.makedirs(directory, exist_ok=True)
+
+        # Construct full file path
+        filename = f"{ticker}_{start_date}_{end_date}.csv"
+        filepath = os.path.join(directory, filename)
+
+        # Save DataFrame to CSV
+        data.to_csv(filepath)
+        logging.info(f"Data saved to {filepath} successfully.")
+    except Exception as e:
+        logging.error(f"An error occurred while saving to CSV: {e}")
 
 if __name__ == "__main__":
     # Example usage
     ticker = input("Enter stock ticker: ")
     start_date = input("Enter start date (YYYY-MM-DD): ")
     end_date = input("Enter end date (YYYY-MM-DD): ")
+    
 
     data = fetch_stock_data(ticker, start_date, end_date)
     if data is not None:
         print(data)
+        save_choice = input("Do you want to save this data to a CSV file? (yes/no): ").strip().lower()
+        if save_choice == "yes":
+            # Ask for optional save directory
+            save_directory = input("Enter directory to save data (leave empty for default 'stocks_data/'): ") or "stocks_data/"
+            save_to_csv(data, ticker, start_date, end_date, save_directory)
+        else:
+            logging.info("Data was not saved to a CSV file.")
